@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - Gabriel Melo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light gray background */
+        }
+        .container {
+            max-width: 900px; /* Increased max-width for better layout */
+            margin: 40px auto; /* Added top/bottom margin */
+            padding: 30px; /* Increased padding */
+            background-color: #ffffff;
+            border-radius: 12px; /* More rounded corners */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Softer shadow */
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px; /* Increased margin */
+            padding-bottom: 20px; /* Added padding */
+            border-bottom: 2px solid #e2e8f0; /* Lighter border */
+        }
+        .profile-pic-container {
+            width: 150px; /* Increased size */
+            height: 150px; /* Increased size */
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 30px; /* Increased margin */
+            background-color: #e2e8f0; /* Placeholder background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 4px solid #cbd5e1; /* Added border */
+        }
+        .profile-pic-placeholder {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the area */
+        }
+        .header-info h1 {
+            font-size: 2.25rem; /* Larger name */
+            font-weight: 700;
+            color: #1a202c; /* Darker text */
+            margin-bottom: 5px;
+        }
+        .header-info p {
+            font-size: 1rem; /* Slightly larger contact info */
+            color: #4a5568; /* Softer text color */
+            margin-bottom: 3px;
+        }
+        .header-info p i {
+            margin-right: 10px; /* Increased icon margin */
+            color: #4299e1; /* Blue icon color */
+        }
+        .section {
+            margin-bottom: 28px; /* Increased margin */
+        }
+        .section-title {
+            font-size: 1.5rem; /* Larger section titles */
+            font-weight: 600;
+            color: #2d3748; /* Darker section title */
+            margin-bottom: 15px; /* Increased margin */
+            padding-bottom: 8px; /* Added padding */
+            border-bottom: 2px solid #cbd5e1; /* Lighter border */
+            display: flex;
+            align-items: center;
+        }
+        .section-title i {
+            margin-right: 12px; /* Increased icon margin */
+            color: #4299e1; /* Blue icon color */
+        }
+        .section-content p, .section-content ul {
+            font-size: 0.95rem; /* Slightly adjusted text size */
+            color: #4a5568;
+            line-height: 1.7; /* Increased line height */
+        }
+        .section-content ul {
+            list-style-position: inside;
+            padding-left: 5px;
+        }
+        .section-content li {
+            margin-bottom: 8px; /* Increased list item margin */
+        }
+        .experience-item, .course-item {
+            margin-bottom: 20px; /* Increased margin */
+        }
+        .experience-item h3, .course-item h3 {
+            font-size: 1.15rem; /* Larger item titles */
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 3px;
+        }
+        .experience-item .date, .course-item .duration {
+            font-size: 0.85rem;
+            color: #718096; /* Lighter date/duration color */
+            margin-bottom: 5px;
+        }
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px; /* Increased gap */
+        }
+        .skill-tag {
+            background-color: #e2e8f0; /* Lighter skill tag background */
+            color: #4a5568; /* Softer skill tag text color */
+            padding: 8px 15px; /* Increased padding */
+            border-radius: 20px; /* More rounded tags */
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                padding: 20px;
+            }
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: center; /* Center text on mobile */
+            }
+            .profile-pic-container {
+                margin-right: 0;
+                margin-bottom: 20px; /* Add margin below pic on mobile */
+                align-self: center; /* Center picture on mobile */
+            }
+            .header-info h1 {
+                font-size: 1.8rem;
+            }
+             .header-info {
+                width: 100%;
+                text-align: center;
+            }
+        }
+         @media (max-width: 480px) {
+            .header-info h1 {
+                font-size: 1.6rem;
+            }
+            .section-title {
+                font-size: 1.3rem;
+            }
+            .experience-item h3, .course-item h3 {
+                font-size: 1.05rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="profile-pic-container">
+                <!-- Substitua 'URL_DA_SUA_FOTO_AQUI' pela URL da sua foto de perfil -->
+                <img src="img/Foto.jpeg" alt="Foto de Perfil de Gabriel Melo" class="profile-pic-placeholder" onerror="this.src='https://placehold.co/150x150/E2E8F0/4A5568?text=Foto'">
+            </div>
+            <div class="header-info">
+                <h1>GABRIEL MELO</h1>
+                <p><i class="fas fa-phone-alt"></i> Celular: +55 11 95100-8365</p>
+                <p><i class="fas fa-envelope"></i> E-mail: Gabrieldeomeloo@gmail.com</p>
+                <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/Gaybs910" target="_blank" class="text-blue-500 hover:underline">https://github.com/Gaybs910</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> Localização: São Paulo/São Paulo</p>
+            </div>
+        </header>
+
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-bullseye"></i> OBJETIVO</h2>
+            <div class="section-content">
+                <p>Busco oportunidade na área de Tecnologia da Informação, com preferência para atuação em Ciência de Dados, onde possa aplicar e expandir meus conhecimentos e contribuir para o desenvolvimento de soluções inovadoras.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-user-graduate"></i> FORMAÇÃO ACADÊMICA</h2>
+            <div class="section-content">
+                <div class="experience-item">
+                    <h3>Ciência da Computação (Cursando - 1º semestre)</h3>
+                    <p>Universidade Cruzeiro do Sul</p>
+                    <p class="date">Início: Jan/2025 - Previsão de Conclusão: 2029</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-briefcase"></i> EXPERIÊNCIA PROFISSIONAL</h2>
+            <div class="section-content">
+                <div class="experience-item">
+                    <h3>Auxiliar Administrativo</h3>
+                    <p>Astra Assessoria | Outubro/2022 - Atual</p>
+                    <p class="italic text-sm mb-2">Principal conhecimento adquirido: Assessoria e Consultoria em saúde.</p>
+                    <ul>
+                        <li>Responsável pela organização e controle de arquivos digitais e físicos.</li>
+                        <li>Suporte no atendimento a clientes e encaminhamento de solicitações.</li>
+                        <li>Auxílio na elaboração de planilhas e relatórios administrativos.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-chalkboard-teacher"></i> CURSOS COMPLEMENTARES</h2>
+            <div class="section-content">
+                <div class="course-item">
+                    <h3>HTML e CSS: ambientes de desenvolvimento, estrutura de arquivos e tags</h3>
+                    <p class="duration">Alura/Oracle Next Education (ONE) - 8 horas (Concluído em Fevereiro/2025)</p>
+                </div>
+                <div class="course-item">
+                    <h3>ChatGPT: otimizando a qualidade dos resultados</h3>
+                    <p class="duration">Alura/Oracle Next Education (ONE) - 8 horas (Concluído em Fevereiro/2025)</p>
+                </div>
+                <div class="course-item">
+                    <h3>Praticando Lógica de programação: Challenge amigo secreto</h3>
+                    <p class="duration">Alura/Oracle Next Education (ONE) - 8 horas (Concluído em Fevereiro/2025)</p>
+                </div>
+                <div class="course-item">
+                    <h3>Lógica de programação: explore funções e listas</h3>
+                    <p class="duration">Alura/Oracle Next Education (ONE) - 6 horas (Concluído em Fevereiro/2025)</p>
+                </div>
+                 <div class="course-item">
+                    <h3>Hábitos: da produtividade às metas pessoais</h3>
+                    <p class="duration">Alura/Oracle Next Education (ONE) - 6 horas (Concluído em Janeiro/2025)</p>
+                </div>
+                <div class="course-item">
+                    <h3>Foco: trazendo mais resultados para o dia a dia</h3>
+                    <p class="duration">Alura/Oracle Next Education (ONE) - 10 horas (Concluído em Janeiro/2025)</p>
+                </div>
+                <div class="course-item">
+                    <h3>LinkedIn: como fazer o seu perfil trabalhar para você</h3>
+                    <p class="duration">Alura/Oracle Next Education (ONE) - 4 horas (Concluído em Janeiro/2025)</p>
+                </div>
+                <div class="course-item">
+                    <h3>Lógica de programação: mergulhe em programação com JavaScript</h3>
+                    <p class="duration">Alura/Oracle Next Education (ONE) - 6 horas (Concluído em Janeiro/2025)</p>
+                </div>
+                <div class="course-item">
+                    <h3>Aprender a aprender: técnicas para seu autodesenvolvimento</h3>
+                    <p class="duration">Alura/Oracle Next Education (ONE) - 8 horas (Concluído em Janeiro/2025)</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-cogs"></i> HABILIDADES</h2>
+            <div class="section-content">
+                <p class="mb-3"><strong>Idiomas:</strong> Português (Nativo), Inglês (Intermediário)</p>
+                <p class="mb-1"><strong>Técnicas:</strong></p>
+                <div class="skills-list">
+                    <span class="skill-tag">Lógica de Programação</span>
+                    <span class="skill-tag">JavaScript (básico)</span>
+                    <span class="skill-tag">HTML (básico)</span>
+                    <span class="skill-tag">CSS (básico)</span>
+                    <span class="skill-tag">Python (intermediário)</span>
+                    <span class="skill-tag">Pacote Office</span>
+                    <!-- Adicione mais habilidades conforme necessário -->
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
